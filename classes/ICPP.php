@@ -27,4 +27,12 @@ class ICPP
         }
         return $db;
     }
+
+    public static function requireTwig() {
+        $ROOT = $_SERVER['DOCUMENT_ROOT'] . "/ICPP";
+        $loader = new Twig_Loader_Filesystem("$ROOT/twig");
+        return new Twig_Environment($loader, array(
+        //    'cache' => './compilation_cache',
+        ));
+    }
 }

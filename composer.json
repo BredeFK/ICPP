@@ -1,0 +1,15 @@
+
+{
+    "name": "ICPP/bredefk",
+    "description": "",
+    "authors": [
+        {
+            "name": "Brede Fritjof Klausen",
+            "email": "bredefk@stud.ntnu.no"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.4",
+        "twbs/bootstrap": "4.0.0"
+    }
+}

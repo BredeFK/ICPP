@@ -1,0 +1,9 @@
+vendor/
+
+composer.phar
+
+# Twig
+cache/
+
+# Mac
+.DS_Store
