@@ -4,6 +4,26 @@
 class Users
 {
 
+    // Returns specific user
+    public static function getUserWithID($db, $userID)
+    {
+        try {
+            $sql = "SELECT users.id, users.name, users.email_student, users.teacher, users.email_private FROM users WHERE users.id = ?";
+            $stmt = $db->prepare($sql);
+            $param = array($userID);
+            $stmt->execute($param);
+
+            if ($stmt->rowCount() == 1) {
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                if ($row) {
+                    return $row;
+                }
+            }
+        } catch (PDOException $ex) {
+            echo "Something went wrong" . $ex; //Error message
+        }
+        return null;
+    }
 
     // Returns a number of how many users in db
     public static function getTotalUsers($db)

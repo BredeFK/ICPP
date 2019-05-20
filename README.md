@@ -2,7 +2,9 @@
 This is my Last solo-jam for the course [IMT2581 - Rapid Prototyping and Innovation](https://www.ntnu.edu/studies/courses/IMT2581/2018/1#tab=omEmnet) with the [IMT2291 - Web Technology](https://www.ntnu.edu/studies/courses/IMT2291#tab=omEmnet) course in mind.
 
 ## Note
-This project is to show charts for the https://github.com/JohanAanesen/CSAMS databse contents
+* This project can be looked as a kind of plugin for my [bachelor project](https://github.com/JohanAanesen/CSAMS) and is for displaying charts of the databse contents.
+* It's also to practice for an exam I have that involves PHP, Polymer, Twig and technologies like that.
+* I use ex `users.id, users.name, users.email_student, users.teacher, users.email_private` instead of `*` in queries for safer extraction.
 
 ## Requirements
 **The requirements was very loose, so I make my own** 
