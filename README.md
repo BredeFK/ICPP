@@ -4,6 +4,13 @@ This is my Last solo-jam for the course [IMT2581 - Rapid Prototyping and Innovat
 ## Note
 This project is to show charts for the https://github.com/JohanAanesen/CSAMS databse contents
 
+## Requirements
+**The requirements was very loose, so I make my own**
+* ~~Get top X users that has delivered the most~~ This dosen't work beacuse when a user re-deliver or withdraws an assignment and deliver again, the assignment will only be updated. i.e there will always be max one assignment submission for each user. 
+* Get number of delivered submissions(re-deliver too) to the different assignments/courses
+* Get number of 'active' users vs. non active. The users that don't belong to any courses
+* Get most logged events
+
 ## Installation
 1. Clone project in to `C:\xampp\htdocs`
 2. Start xampp
