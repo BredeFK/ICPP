@@ -16,6 +16,7 @@ This is my Last solo-jam for the course [IMT2581 - Rapid Prototyping and Innovat
 * Implement twig
 * Get more data to create charts with
 * Check out `google charts polymer` and implement something like that
+* Check out triggers https://developers.google.com/chart/interactive/docs/gallery/piechart
 
 ## Installation
 1. Clone project
