@@ -2,6 +2,7 @@
 
     // Get root
     $ROOT = $_SERVER['DOCUMENT_ROOT'] . "/ICPP";
+    require_once "$ROOT/classes/DB.php";
 
 
     class ICPP{
