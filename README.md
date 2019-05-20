@@ -18,10 +18,12 @@ This is my Last solo-jam for the course [IMT2581 - Rapid Prototyping and Innovat
 * Check out `google charts polymer` and implement something like that
 
 ## Installation
-1. Clone project in to `C:\xampp\htdocs`
-2. Start xampp
-3. Export `cs53` database with settings like this: ![image](https://user-images.githubusercontent.com/32249338/58019361-a4b6b100-7b05-11e9-84c8-2d11bf90b6b7.png)
-3. Profit <!-- TODO add more here later -->
+1. Clone project
+2. Export `cs53` database with settings like this: ![image](https://user-images.githubusercontent.com/32249338/58019361-a4b6b100-7b05-11e9-84c8-2d11bf90b6b7.png)
+3. Start XAMPP
+4. Import database with name `cs53`
+5. Run `composer install` in project
+6. Profit
 
 ## Sources
 1. Former project from [IMT2291](https://www.ntnu.edu/studies/courses/IMT2291#tab=omEmnet) https://github.com/JohanAanesen/MeToobe
