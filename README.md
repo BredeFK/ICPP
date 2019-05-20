@@ -28,3 +28,7 @@ This is my Last solo-jam for the course [IMT2581 - Rapid Prototyping and Innovat
 ## Sources
 1. Former project from [IMT2291](https://www.ntnu.edu/studies/courses/IMT2291#tab=omEmnet) https://github.com/JohanAanesen/MeToobe
 2. Bachelor project where the data will come from https://github.com/JohanAanesen/CSAMS
+3. https://developers.google.com/chart/interactive/docs/gallery
+
+## Other
+I had a lot of techincal issues as I'm kinda new to PHP, twig and polymer.
