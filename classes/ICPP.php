@@ -2,6 +2,7 @@
 
 // Get root
 $ROOT = $_SERVER['DOCUMENT_ROOT'] . "/ICPP";
+require_once "$ROOT/vendor/autoload.php";
 require_once "$ROOT/classes/DB.php";
 require_once "$ROOT/classes/Users.php";
 require_once "$ROOT/classes/Logs.php";
@@ -14,7 +15,7 @@ class ICPP
     // Set location to home
     public static function gotoHome()
     {
-        header("Location: view");
+        header("Location: php");
         exit();
     }
 
@@ -28,11 +29,12 @@ class ICPP
         return $db;
     }
 
-    public static function requireTwig() {
+    public static function requireTwig()
+    {
         $ROOT = $_SERVER['DOCUMENT_ROOT'] . "/ICPP";
         $loader = new Twig_Loader_Filesystem("$ROOT/twig");
         return new Twig_Environment($loader, array(
-        //    'cache' => './compilation_cache',
+            //    'cache' => './compilation_cache',
         ));
     }
 }

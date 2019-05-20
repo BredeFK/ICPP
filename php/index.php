@@ -5,5 +5,5 @@ $ROOT = $_SERVER['DOCUMENT_ROOT'] . "/ICPP";
 require_once "$ROOT/classes/ICPP.php";
 
 $twig = ICPP::requireTwig();
-   
-?>
+
+echo $twig->render('index.html', array());
