@@ -7,8 +7,13 @@ This project is to show charts for the https://github.com/JohanAanesen/CSAMS dat
 ## Requirements
 **The requirements was very loose, so I make my own** 
 * ~~Get number of delivered submissions(re-deliver too) to the different assignments/courses.~~ This dosen't work beacuse when a user re-deliver or withdraws an assignment and deliver again, the assignment will only be updated. i.e there will always be max one assignment submission for each user. 
-* Get number of 'active' users vs. non active. The users that don't belong to any courses
+* Get number of 'active' users vs. non active. The users that don't belong to any courses, and put in pie chart + when clicked show list or more info atleast.
 * Get most logged events
+
+## TODO
+* Implement twig
+* Get more data to create charts with
+* Check out `google charts polymer` and implement something like that
 
 ## Installation
 1. Clone project in to `C:\xampp\htdocs`
