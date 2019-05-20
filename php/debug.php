@@ -17,6 +17,7 @@ $inactiveUsers = Users::getUsersInactive($db);
 $activeUsers = Users::getUsersActive($db);
 $logs = Logs::getAll($db);
 $courses = Course::getCoursesToUser($db, $userID);
+$allCourses = Course::getAll($db);
 
 // Display all users
 echo "<h1>Users</h1>";
@@ -66,4 +67,11 @@ echo "Variable type is: " . gettype($courses). '<br>';
 echo "Count is: " . count($courses) . '<br><br>';;
 foreach($courses as $result) {
     echo $result['courseid'], '<br>';
+}
+
+echo "<h2>getAll</h2>";
+echo "Variable type is: " . gettype($allCourses). '<br>';
+echo "Count is: " . count($allCourses) . '<br>';;
+foreach($allCourses as $result) {
+    echo $result['id'] . " " . $result['hash'] . " " . $result['coursecode'] . " " . $result['coursename'] . " " . $result['name'] . " " . $result['description'] . " " . $result['year'] . " " . $result['semester'], '<br>';
 }

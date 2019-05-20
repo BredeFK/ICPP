@@ -13,4 +13,14 @@ class Course
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    // Returns all courses
+    public static function getAll($db)
+    {
+        $sql = "SELECT course.id, course.hash, course.coursecode, course.coursename, users.name, course.description, course.year, course.semester FROM course INNER JOIN users ON course.teacher = users.id";
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
