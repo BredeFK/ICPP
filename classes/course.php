@@ -23,4 +23,17 @@ class Course
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+      // Returns all courses with number of users
+      public static function getAllParticipantsForAllCourses($db)
+      {
+          $sql = "SELECT COUNT(usercourse.userid) AS users, course.coursename, course.coursecode FROM usercourse 
+          INNER JOIN users ON users.id = usercourse.userid 
+          INNER JOIN course ON usercourse.courseid = course.id
+          GROUP BY usercourse.courseid";
+          $stmt = $db->prepare($sql);
+          $stmt->execute();
+  
+          return $stmt->fetchAll(PDO::FETCH_ASSOC);
+      }
 }

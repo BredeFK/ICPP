@@ -8,8 +8,12 @@ $twig = ICPP::requireTwig();
 
 $db = ICPP::requireDatabase();
 
-$courses = Course::getAll($db);
+$activeUsers = Users::getUsersActive($db);
+$inactiveUsers = Users::getUsersInactive($db);
+$coursesAndUsers = Course::getAllParticipantsForAllCourses($db);
 
 echo $twig->render('index.html', array(
-    'courses' => $courses,
+    'activeUsers' => count($activeUsers),
+    'inactiveUsers' => count($inactiveUsers),
+    'courseUsers' => $coursesAndUsers,
 ));
