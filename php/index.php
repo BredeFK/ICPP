@@ -12,10 +12,12 @@ $activeUsers = Users::getUsersActive($db);
 $inactiveUsers = Users::getUsersInactive($db);
 $coursesAndUsers = Course::getAllParticipantsForAllCourses($db);
 $submissions = UserSubmission::getAllSubmissionsForAllAssignments($db);
+$logs = Logs::getAllDistinct($db);
 
 echo $twig->render('index.html', array(
     'activeUsers' => count($activeUsers),
     'inactiveUsers' => count($inactiveUsers),
     'courseUsers' => $coursesAndUsers,
     'submissions' => $submissions,
+    'logs' => $logs,
 ));

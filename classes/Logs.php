@@ -13,4 +13,14 @@ class Logs{
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    // Returns the top 5 numbers of each distinct log from db
+    public static function getAllDistinct($db)
+    {
+        $sql = "SELECT COUNT(logs.activity) as c, logs.activity FROM logs GROUP BY logs.activity ORDER BY `c` DESC LIMIT 5";
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
