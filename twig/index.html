@@ -32,19 +32,19 @@
             var data = google.visualization.arrayToDataTable([
                 ['Course', 'Users'],
                 {% for item in courseUsers %}
-                ['{{ item.coursecode }} - {{ item.coursename }}', {{ item.users }}],
-                {% endfor %}
+        ['{{ item.coursecode }} - {{ item.coursename }}', {{ item.users }}],
+            {% endfor %}
             ]);
 
-            var options = {
-                chart: {
-                    subtitle: 'All teachers and students in each course',
-                }
-            };
+        var options = {
+            chart: {
+                subtitle: 'All teachers and students in each course',
+            }
+        };
 
-            var chart = new google.charts.Bar(document.getElementById('columnchart_material_course'));
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material_course'));
 
-            chart.draw(data, google.charts.Bar.convertOptions(options));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
         }
     </script>
     <script type="text/javascript">
@@ -55,19 +55,19 @@
             var data = google.visualization.arrayToDataTable([
                 ['Assignment', 'Submissions'],
                 {% for item in submissions %}
-                ['{{ item.assignment }}', {{ item.submissions }}],
-                {% endfor %}
+        ['{{ item.assignment }}', {{ item.submissions }}],
+            {% endfor %}
             ]);
 
-            var options = {
-                chart: {
-                    subtitle: 'All submissions from all the assignments',
-                }
-            };
+        var options = {
+            chart: {
+                subtitle: 'All submissions from all the assignments',
+            }
+        };
 
-            var chart = new google.charts.Bar(document.getElementById('columnchart_material_assignment'));
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material_assignment'));
 
-            chart.draw(data, google.charts.Bar.convertOptions(options));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
         }
     </script>
     <script type="text/javascript">
@@ -80,8 +80,8 @@
             var data = google.visualization.arrayToDataTable([
                 ['Logs', 'Frequency of logs'],
                 {% for item in logs %}
-                    ['ActivityID {{ item.activity }}', {{ item.c }}],
-                {% endfor %}
+        ['ActivityID {{ item.activity }}', {{ item.c }}],
+            {% endfor %}
         ]);
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart_logs'));
@@ -121,31 +121,31 @@
             <table class="table table-striped table-sm">
                 <tr>
                     <td>Number of courses</td>
-                    <td>X</td>
+                    <td>{{ numbCourses}}</td>
                 </tr>
                 <tr>
                     <td>Number of assignments</td>
-                    <td>X</td>
-                </tr>
-                <tr>
-                    <td>Number of teachers</td>
-                    <td>X</td>
-                </tr>
-                <tr>
-                    <td>Number of students</td>
-                    <td>X</td>
+                    <td>{{ numbAssignments }}</td>
                 </tr>
                 <tr>
                     <td>Number of submissions</td>
-                    <td>X</td>
+                    <td>{{ numbSubmissions }}</td>
                 </tr>
                 <tr>
-                    <td>Number of reviews</td>
-                    <td>X</td>
+                    <td>Number of users</td>
+                    <td>{{ numbUsers }}</td>
+                </tr>
+                <tr>
+                    <td>Number of teachers</td>
+                    <td>{{ numbTeachers }}</td>
+                </tr>
+                <tr>
+                    <td>Number of students</td>
+                    <td>{{ numbStudents }}</td>
                 </tr>
                 <tr>
                     <td>Number of logs</td>
-                    <td>X</td>
+                    <td>{{ numbLogs }}</td>
                 </tr>
             </table>
         </div>
@@ -162,14 +162,11 @@
             <h2>All submissions by assignments</h2>
             <div id="columnchart_material_assignment" style="width: 800px; height: 500px;"></div>
         </div>
-        <!--
-        <div class="my-3 p-3 bg-white rounded shadow-sm">
-            <h2>All reviews by assignments</h2>
-        </div>
-        -->
         <div class="my-3 p-3 bg-white rounded shadow-sm">
             <h2>Top 5 most frequent logs</h2>
-            <p>To see what the activity id's mean, check out <a href="https://github.com/JohanAanesen/CSAMS/blob/master/webservice/model/logs.go" target="_blank">this file</a></p>
+            <p>To see what the activity id's mean, check out <a
+                    href="https://github.com/JohanAanesen/CSAMS/blob/master/webservice/model/logs.go"
+                    target="_blank">this file</a></p>
             <div id="piechart_logs" style="width: 900px; height: 500px;"></div>
         </div>
     </main>
