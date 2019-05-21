@@ -1,4 +1,4 @@
-# ICPP - Interactive Charts using Polymer and PHP 
+# Charts using PHP and Google-Graphs
 This is my Last solo-jam for the course [IMT2581 - Rapid Prototyping and Innovation](https://www.ntnu.edu/studies/courses/IMT2581/2018/1#tab=omEmnet) with the [IMT2291 - Web Technology](https://www.ntnu.edu/studies/courses/IMT2291#tab=omEmnet) course in mind. 
 
 **Changes from original idea**
@@ -39,3 +39,17 @@ The original plan was to use polymer and have interactive charts.
 
 ## Other
 I had a lot of techincal issues as I'm kinda new to PHP, twig and polymer.
+
+## Pictures
+![image](https://user-images.githubusercontent.com/32249338/58111150-3c44fe00-7bf1-11e9-87e9-8e1dd98a17e0.png)
+
+![image](https://user-images.githubusercontent.com/32249338/58111173-47982980-7bf1-11e9-879b-ff26503a3d34.png)
+
+![image](https://user-images.githubusercontent.com/32249338/58111261-71515080-7bf1-11e9-9ed6-be872d75a907.png)
+
+![image](https://user-images.githubusercontent.com/32249338/58111270-76ae9b00-7bf1-11e9-942a-e11c32c40a37.png)
+
+![image](https://user-images.githubusercontent.com/32249338/58111280-7ca47c00-7bf1-11e9-9165-abaa2b9b8f31.png)
+
+![image](https://user-images.githubusercontent.com/32249338/58111305-83cb8a00-7bf1-11e9-9c13-9a226c4229b0.png)
+
