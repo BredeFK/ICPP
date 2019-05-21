@@ -1,4 +1,4 @@
-# Charts using PHP and Google-Graphs
+# Graphs using PHP and Google-Graphs
 This is my Last solo-jam for the course [IMT2581 - Rapid Prototyping and Innovation](https://www.ntnu.edu/studies/courses/IMT2581/2018/1#tab=omEmnet) with the [IMT2291 - Web Technology](https://www.ntnu.edu/studies/courses/IMT2291#tab=omEmnet) course in mind. 
 
 **Changes from original idea**
@@ -30,7 +30,8 @@ The original plan was to use polymer and have interactive charts.
 3. Start XAMPP
 4. Import database with name `cs53`
 5. Run `composer install` in project
-6. Profit
+6. Go to `localhost/ICPP`
+7. Profit
 
 ## Sources
 1. Former project from [IMT2291](https://www.ntnu.edu/studies/courses/IMT2291#tab=omEmnet) https://github.com/JohanAanesen/MeToobe
