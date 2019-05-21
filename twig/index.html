@@ -89,6 +89,29 @@
         chart.draw(data);
         }
     </script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['bar'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['User', 'Number of submissions'],
+                {% for item in topSubmissions %}
+        ['{{ item.name }} (id: {{ item.user_id}})', {{ item.submissions }}],
+            {% endfor %}
+            ]);
+
+        var options = {
+            chart: {
+                subtitle: 'Top 15 users that has submitted most assignments',
+            }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material_top15'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+    </script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -100,7 +123,6 @@
             margin-top: 65px;
         }
     </style>
-
 </head>
 
 <body class="bg-light">
@@ -149,26 +171,34 @@
                 </tr>
             </table>
         </div>
-        <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <!-- Graphs -->
+
+        <div class="my-3 p-3 bg-white rounded shadow-sm filterDiv users courses">
             <h2>Users with and without courses</h2>
-            <p>Go to <a href="/ICPP/php/debug.php" target="_blank">debug</a> to find out which users are inactive</p>
+            <p>Go to <a href="/ICPP/php/debug.php" target="_blank">debug</a> to find out which users are inactive
+            </p>
             <div id="piechart_courses" style="width: 900px; height: 500px;"></div>
         </div>
-        <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <div class="my-3 p-3 bg-white rounded shadow-sm filterDiv logs">
+            <h2>Top 15 assignment submittors</h2>
+            <div id="columnchart_material_top15" style="width: 800px; height: 500px;"></div>
+        </div>
+        <div class="my-3 p-3 bg-white rounded shadow-sm filterDiv users courses">
             <h2>All courses with users</h2>
             <div id="columnchart_material_course" style="width: 800px; height: 500px;"></div>
         </div>
-        <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <div class="my-3 p-3 bg-white rounded shadow-sm filterDiv assignments">
             <h2>All submissions by assignments</h2>
             <div id="columnchart_material_assignment" style="width: 800px; height: 500px;"></div>
         </div>
-        <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <div class="my-3 p-3 bg-white rounded shadow-sm filterDiv logs">
             <h2>Top 5 most frequent logs</h2>
             <p>To see what the activity id's mean, check out <a
                     href="https://github.com/JohanAanesen/CSAMS/blob/master/webservice/model/logs.go"
                     target="_blank">this file</a></p>
             <div id="piechart_logs" style="width: 900px; height: 500px;"></div>
         </div>
+
     </main>
 </body>
 

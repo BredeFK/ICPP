@@ -15,6 +15,7 @@ $coursesAndUsers = Course::getAllParticipantsForAllCourses($db);
 $submissions = UserSubmission::getAllSubmissionsForAllAssignments($db);
 $logs = Logs::getAllDistinct($db);
 $numbLogs = Logs::getAll($db);
+$topSubmissions = UserSubmission::getTopSubmitors($db);
 
 $numbTotalSubmissions = 0;
 $students = 0;
@@ -46,4 +47,5 @@ echo $twig->render('index.html', array(
     'numbUsers' => count($users),
     'numbStudents' => $students,
     'numbTeachers' => $teachers,
+    'topSubmissions' => $topSubmissions,
 ));

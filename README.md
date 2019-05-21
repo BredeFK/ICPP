@@ -4,7 +4,6 @@ This is my Last solo-jam for the course [IMT2581 - Rapid Prototyping and Innovat
 **Changes from original idea**
 The original plan was to use polymer and have interactive charts. 
 * Learning Polymer would have been taking up too much time from the actual development so i skipped that part.
-* I'm really unsure of how to make the charts interactive with PHP, Twig and Google-Charts. Instead I will try to make this project a site to use to understand the data from CSAMS.
 
 ## Note
 * This project can be looked as a kind of plugin for my [bachelor project](https://github.com/JohanAanesen/CSAMS) and is for displaying charts of the databse contents.
