@@ -7,6 +7,7 @@ require_once "$ROOT/classes/DB.php";
 require_once "$ROOT/classes/Users.php";
 require_once "$ROOT/classes/Logs.php";
 require_once "$ROOT/classes/Course.php";
+require_once "$ROOT/classes/UserSubmission.php";
 
 
 class ICPP

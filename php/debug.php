@@ -18,6 +18,7 @@ $activeUsers = Users::getUsersActive($db);
 $logs = Logs::getAll($db);
 $courses = Course::getCoursesToUser($db, $userID);
 $allCourses = Course::getAll($db);
+$submissions = UserSubmission::getAllSubmissionsForAllAssignments($db);
 
 // Display all users
 echo "<h1>Users</h1>";
@@ -74,4 +75,13 @@ echo "Variable type is: " . gettype($allCourses). '<br>';
 echo "Count is: " . count($allCourses) . '<br>';;
 foreach($allCourses as $result) {
     echo $result['id'] . " " . $result['hash'] . " " . $result['coursecode'] . " " . $result['coursename'] . " " . $result['name'] . " " . $result['description'] . " " . $result['year'] . " " . $result['semester'], '<br>';
+}
+
+// Display all submissions
+echo "<h1>Submissions</h1>";
+echo "<h2>getAllSubmissionsForAllAssignments</h2>";
+echo "Variable type is: " . gettype($submissions). '<br>';
+echo "Count is: " . count($submissions) . '<br><br>';;
+foreach($submissions as $result) {
+    echo $result['submissions'] . " " . $result['assignment'], '<br>';
 }
