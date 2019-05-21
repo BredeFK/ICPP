@@ -21,12 +21,12 @@ $numbTotalSubmissions = 0;
 $students = 0;
 $teachers = 0;
 
-foreach ($submissions as $item){
+foreach ($submissions as $item) {
     $numbTotalSubmissions += $item['submissions'];
 }
 
-foreach ($users as $user){
-    if($user['teacher']){
+foreach ($users as $user) {
+    if ($user['teacher']) {
         $teachers++;
     } else {
         $students++;
