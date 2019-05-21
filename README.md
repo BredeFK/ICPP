@@ -25,7 +25,7 @@ The original plan was to use polymer and have interactive charts.
 * Check out triggers https://developers.google.com/chart/interactive/docs/gallery/piechart
 
 ## Installation
-1. Clone project
+1. Clone project in to the folder `C:\xampp\htdocs`
 2. Export `cs53` database with settings like this: ![image](https://user-images.githubusercontent.com/32249338/58019361-a4b6b100-7b05-11e9-84c8-2d11bf90b6b7.png)
 3. Start XAMPP
 4. Import database with name `cs53`
